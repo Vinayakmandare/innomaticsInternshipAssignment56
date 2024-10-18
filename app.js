@@ -15,7 +15,7 @@ searchButton.addEventListener('click', searchMovies);
     const query = searchInput.value.trim();
     console.log(query);
     if (query) {
-        fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=2d1558c7&t=${query}`)
+        fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=2d1558c7&t=${query}`)
     
             .then(response => response.json())
             .then(movie =>{
@@ -41,7 +41,7 @@ searchButton.addEventListener('click', searchMovies);
 
 // Display Movies
 function displayMovies() {
-    fetch(`http://www.omdbapi.com/?s=avengers&apikey=2d1558c7`)
+    fetch(`https://www.omdbapi.com/?s=avengers&apikey=2d1558c7`)
     .then(response => response.json())
     .then(data => {
         console.log(data)
@@ -118,7 +118,7 @@ function addToFavorite(id) {
 
 function displayFavorites(){
     console.log(favorites); 
-     fetch(`http://www.omdbapi.com/?i=${favorites}&apikey=2d1558c7`)
+     fetch(`https://www.omdbapi.com/?i=${favorites}&apikey=2d1558c7`)
     .then(response => response.json())
     .then(movie =>{
         console.log(movie);
